@@ -1,7 +1,6 @@
 package ubs.walterne.berlinClock;
 
 // Returns color formatted Berlin Clock rows
-// Check GitHub commit
 
 public class BerlinClockFace extends BerlinClock {
     private final String LAMP_YELLOW = "Y";
