@@ -103,4 +103,8 @@ public class BerlinClock {
         }
         return null;
     }
+
+    @Override public String toString() {
+        return row1_seconds + row2_fourFourHourBlocks + row3_fourOneHourBlocks + row4_elevenFiveMinuteBlocks + row5_fourOneMinuteBlocks;
+    }
 }

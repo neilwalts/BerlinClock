@@ -33,12 +33,19 @@ class BerlinClockTest {
         LocalTime localTime = ZonedDateTime.now().toLocalTime().truncatedTo(ChronoUnit.SECONDS);
 
         BerlinClockFace berlinClockFace = new BerlinClockFace(localTime.getHour() + ":" + localTime.getMinute() + ":" + localTime.getSecond());
-
+        System.out.println(berlinClockFace.toString());
         System.out.println(berlinClockFace.getColoredRow(ROW1_SECONDS));
         System.out.println(berlinClockFace.getColoredRow(ROW2_HOURS));
         System.out.println(berlinClockFace.getColoredRow(ROW3_HOURS));
         System.out.println(berlinClockFace.getColoredRow(ROW4_MINUTES));
         System.out.println(berlinClockFace.getColoredRow(ROW5_MINUTES));
+    }
+
+    @Test
+    void checkUnformattedTime() {
+        LocalTime localTime = ZonedDateTime.now().toLocalTime().truncatedTo(ChronoUnit.SECONDS);
+        System.out.println(new BerlinClock(localTime.getHour() + ":" + localTime.getMinute() + ":" + localTime.getSecond())
+                .toString());
     }
 
     @Test
