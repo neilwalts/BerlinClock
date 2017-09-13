@@ -19,7 +19,7 @@ class BerlinClockTest {
 
    @Test
     void exceptionTesting() {
-        assertThrows(IllegalArgumentException.class, new BerlinClock("invalid time format"));
+        assertThrows(IllegalArgumentException.class, () -> new BerlinClock("invalid time format"));
         assertThrows(IllegalArgumentException.class, () -> new BerlinClock("invalid:time:format"));
         assertThrows(IllegalArgumentException.class, () -> new BerlinClock("24:00:00"));
         assertThrows(IllegalArgumentException.class, () -> new BerlinClock("00:60:00"));
